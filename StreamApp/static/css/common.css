@@ -1,0 +1,60 @@
+.nav_bar{
+    background-color: #333333;
+}
+
+.side_bar
+{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: medium;
+}
+.feed
+{
+    font-family: 'Armata', sans-serif;
+}
+
+.feed-list
+{
+    width: 80%;
+    background-color: #FFFFFF;
+    word-wrap: break-word;
+    padding-right: 5px;
+}
+.title{
+    font-family: 'Merriweather Sans', sans-serif;
+}
+h2{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: large;
+}
+h1 a{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: larger;
+}
+
+.content
+{
+    display: block;
+}
+
+textarea{
+    height: 20px;
+    width: 150px;
+}
+
+.feed_summary
+{
+    padding: 5px;
+    align: right;
+    font-size: small;
+    margin: 10px;
+    border:1px solid;
+}
+
+.title_summary
+{
+    color: #808080;
+    display:  block;
+    font-size: medium;
+    overflow-y: scroll;
+    height: 900px;
+}

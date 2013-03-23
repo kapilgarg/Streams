@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% extends 'Base.html' %}
+{% block contents %}
+    <script>
+        $(document).ready(function(){
+            localStorage.setItem('1',{{ data }})
+
+            alert(localStorage.getItem('1'));
+        });
+
+
+    </script>
+
+   <h1> <a href="{{ data.feed.link }}"> {{ data.feed.title }}</a> </h1>
+    <img src="{{ data.feed.image.href}}" height="50px" width="50px"/>
+
+
+
+    {{ data.feed.description }}
+
+    {% for entry in data.entries %}
+        <article>
+            <div style="padding-left:5px;">
+                <h2>{{ entry.title }}</h2>
+            </div>
+
+            <article style="font-size: 17px;font-family: 'Sintony', sans-serif;border:1px;padding-left: 5px;
+                background-color: #FFFFFF;letter-spacing: 1px;line-break: auto;">
+                {% if entry.content.0.value %}
+                    {{entry.content.0.value|safe }}
+                {% else %}
+                    {% if entry.summary %}
+                        {{ entry.summary|safe }}
+                    {% endif %}
+                {% endif %}
+            </article>
+        </article>
+
+    {% endfor %}
+{% endblock %}
+
+{% block summary_list %}
+    {% for entry in data.entries %}
+        <div class="feed_summary">
+        <article>
+            <strong> {{ entry.title|safe }} </strong>
+            {{ entry.summary|safe|truncatewords:40 }}
+        </article>
+        </div>
+    {% endfor %}
+{% endblock %}
