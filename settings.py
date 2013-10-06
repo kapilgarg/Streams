@@ -102,7 +102,8 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'Streams.urls'
 
-TEMPLATE_DIRS = ('Z:/D/Django Projects/Streams/templates',)
+#TEMPLATE_DIRS = ('Z:/D/development/Django Projects/Streams/templates',)
+TEMPLATE_DIRS = ('..\Streams\\templates',)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
